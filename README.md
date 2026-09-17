@@ -165,6 +165,76 @@ A escolha das tecnologias deverá considerar os requisitos reais da plataforma a
 
 ---
 
+## Fluxo de desenvolvimento
+
+O projeto utiliza as seguintes branches principais:
+
+- `main`: branch principal, destinada às versões estáveis do projeto;
+- `dev`: branch de desenvolvimento e integração das novas funcionalidades.
+
+Novas funcionalidades, correções e alterações devem ser desenvolvidas em branches específicas, criadas a partir da `dev`.
+
+### Padrão de branches
+
+O padrão adotado para criação de branches é:
+
+```text
+feature/nome-da-feature
+fix/nome-da-correcao
+docs/nome-da-alteracao
+chore/nome-da-tarefa
+hotfix/nome-da-correcao
+```
+
+Exemplos:
+
+```text
+feature/login
+feature/gestao-tarefas
+fix/validacao-usuario
+docs/atualiza-readme
+chore/configura-projeto
+```
+
+Fluxo principal:
+
+```text
+feature/* → dev → main
+fix/*     → dev → main
+docs/*    → dev → main
+chore/*   → dev → main
+```
+
+As alterações devem ser integradas preferencialmente por meio de Pull Requests.
+
+### Padrão de commits
+
+O projeto utiliza o padrão **Conventional Commits**.
+
+Tipos principais:
+
+```text
+feat: nova funcionalidade
+fix: correção de bug
+docs: alteração na documentação
+refactor: refatoração de código
+test: criação ou alteração de testes
+chore: manutenção ou configuração
+style: alterações de formatação
+```
+
+Exemplos:
+
+```text
+feat: adiciona autenticação de usuários
+fix: corrige validação do cadastro de cliente
+docs: documenta fluxo de desenvolvimento
+chore: configura estrutura inicial do projeto
+```
+
+Os commits devem ser escritos de forma clara, objetiva e descrever a alteração realizada.
+---
+
 ## Estrutura do projeto
 
 A estrutura de diretórios será documentada após a definição inicial da arquitetura e da stack tecnológica.
